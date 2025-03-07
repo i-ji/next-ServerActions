@@ -12,7 +12,7 @@ interface ListType {
 const List = ({ todos, refectedTodos }: ListType) => {
   const cloneTodos = [...todos];
   const updatedTodos = async (todo: TodoType) => {
-    const updatedTodo: TodoType = await editTodo(todo);
+    const [updatedTodo] = await editTodo(todo);
 
     cloneTodos.forEach((todo) => {
       if (todo.id === updatedTodo.id) {
@@ -25,7 +25,7 @@ const List = ({ todos, refectedTodos }: ListType) => {
   };
 
   const destoryTodos = async (todo: TodoType) => {
-    const deletedTodo: TodoType = await deleteTodo(todo.id);
+    const [deletedTodo] = await deleteTodo(todo.id);
 
     const newTodos = cloneTodos.filter((todo) => {
       return deletedTodo.id !== todo.id;

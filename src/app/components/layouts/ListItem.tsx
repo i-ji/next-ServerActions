@@ -27,7 +27,7 @@ const ListItem = ({ todo, updatedTodos, destoryTodos }: ListItemType) => {
   };
   const isEditedState = async () => {
     const newTodo = {
-      id: String(todo.id),
+      id: todo.id,
       task: editedTask,
       isDone: false,
     };

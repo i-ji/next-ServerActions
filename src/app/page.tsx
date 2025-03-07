@@ -4,7 +4,7 @@ import Form from "./components/layouts/Form";
 export default async function Home() {
   const todos = await getAllTodos();
 
-  const cloneTodos = [...todos].reverse();
+  const cloneTodos = [...todos];
 
   return (
     <div className="max-w-[640px] mx-auto mt-10 px-3 sm:px-0">

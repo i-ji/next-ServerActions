@@ -20,17 +20,9 @@ const Form = ({ todos }: FormType) => {
 
     if (enteredTask === "") return;
 
-    const newTodo = {
-      id: String(Math.random() * 10e1),
-      task: enteredTask,
-      isDone: false,
-    };
-
-    const todo = await addTodo(newTodo);
+    const [todo] = await addTodo(enteredTask);
 
     displayedTodos.unshift(todo);
-
-    setDisplayedTodos(todos);
     refectedTodos(displayedTodos);
 
     setEnteredTask("");

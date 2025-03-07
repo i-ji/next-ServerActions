@@ -6,14 +6,13 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "json-server": "npx json-server --watch src/data/db.json -p 3001"
+    "lint": "next lint"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
+    "@supabase/supabase-js": "^2.49.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "json-server": "^1.0.0-beta.3",
     "lucide-react": "^0.476.0",
     "next": "15.2.0",
     "react": "^19.0.0",
